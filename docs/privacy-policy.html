@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ScanPDF</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-2: #1e6be5;
+      --radius: 14px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(120% 120% at 20% 20%, rgba(96,165,250,0.10), transparent),
+                  radial-gradient(140% 140% at 80% 10%, rgba(30,107,229,0.10), transparent),
+                  var(--bg);
+      color: var(--text);
+      padding: 48px 20px 80px;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, rgba(96,165,250,0.14), rgba(30,107,229,0.14));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 6px; font-size: 32px; letter-spacing: -0.02em; }
+    p.lead { margin: 0; color: var(--muted); font-size: 16px; }
+    .back { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back:hover { text-decoration: underline; }
+    section {
+      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 24px 24px 18px;
+      box-shadow: var(--shadow);
+    }
+    h2 { margin-top: 0; color: var(--accent); letter-spacing: -0.01em; }
+    h3 { color: var(--text); margin: 18px 0 8px; }
+    ul, ol { padding-left: 20px; margin: 12px 0 0; }
+    li { margin: 6px 0; }
+    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 0; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    th { color: var(--accent); font-weight: 600; }
+    a { color: var(--accent); }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <a class="back" href="index.html">&larr; Back to ScanPDF</a>
+      <h1>Privacy Policy</h1>
+      <p class="lead">Last Updated: April 25, 2026</p>
+    </div>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>ScanPDF ("we," "our," or "the app") is an on-device document scanning application that converts photos of paper documents into multi-page PDF files. This Privacy Policy explains how ScanPDF handles information.</p>
+    </section>
+
+    <section>
+      <h2>Information We Collect</h2>
+
+      <h3>Document Images</h3>
+      <ul>
+        <li><strong>Page captures:</strong> When you actively start a scan, ScanPDF (via Google ML Kit Document Scanner) captures photographs of pages through your device's camera.</li>
+        <li><strong>Generated PDFs:</strong> Captured pages are combined into a multi-page PDF file.</li>
+      </ul>
+
+      <h3>What we do NOT collect</h3>
+      <ul>
+        <li>No personal information</li>
+        <li>No biometric data</li>
+        <li>No location data</li>
+        <li>No contacts</li>
+        <li>No usage analytics</li>
+        <li>No advertising identifiers</li>
+        <li>No account or login data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p>ScanPDF uses captured documents solely for:</p>
+      <ul>
+        <li>Producing a PDF file from your scan</li>
+        <li>Displaying a preview of the resulting PDF</li>
+        <li>Sharing the PDF when you explicitly tap "Share"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+
+      <h3>Local Storage Only</h3>
+      <p><strong>All scans and PDFs are stored exclusively on your device.</strong> ScanPDF operates entirely on-device and does not:</p>
+      <ul>
+        <li>Transmit your scans to any developer-operated server</li>
+        <li>Use cloud storage</li>
+        <li>Share data with third parties (unless you explicitly choose to share via Android's share sheet)</li>
+        <li>Require an account or login</li>
+      </ul>
+      <p>Files are stored in:</p>
+      <ul>
+        <li>The app's private <code>filesDir/scans/</code> directory (final multi-page PDFs)</li>
+        <li>The app's private <code>filesDir/staging/</code> directory (temporary capture files)</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <ul>
+        <li>All files live in the app's private storage area, inaccessible to other applications</li>
+        <li>The app declares <code>android:allowBackup="false"</code> so PDFs are not included in Android Auto Backup or <code>adb backup</code></li>
+        <li>The app declares no network permissions for its own use</li>
+      </ul>
+
+      <h3>Third-Party Services</h3>
+      <ul>
+        <li><strong>Google ML Kit Document Scanner:</strong> Provides the camera UI, edge detection, perspective correction, filters, and PDF assembly. Runs entirely on-device. The first time you scan, Google Play services may download the scanner module from Google Play. After that no internet is required.</li>
+        <li><strong>No other third-party SDKs</strong> - no analytics, no crash reporting, no ads, no tracking.</li>
+      </ul>
+
+      <h3>No Remote Access</h3>
+      <p>The developer has no ability to access, view, modify, or delete any data stored by this app. ScanPDF:</p>
+      <ul>
+        <li>Does not connect to any developer-operated server</li>
+        <li>Has no backend infrastructure</li>
+        <li>Stores all data exclusively on your local device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sharing</h2>
+      <p>When you tap "Share PDF" in the app, ScanPDF passes the PDF to Android's system share sheet. From there you choose the destination (Gmail, Drive, WhatsApp, and so on). The receiving app handles the file according to its own privacy practices. ScanPDF cannot see or control what happens after sharing.</p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>Camera:</strong> Requested by Google ML Kit's scanner Activity at the moment you start a scan. ScanPDF does not access the camera outside of this flow.</li>
+        <li><strong>Storage:</strong> No external-storage permissions are requested. All files stay in app-private storage.</li>
+        <li><strong>Internet:</strong> Not declared in the app's Manifest. Used only by Google Play services to fetch the scanner module on first run, governed by Google Play's own permissions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+      <ul>
+        <li>PDFs you create remain on your device until you delete them or uninstall the app.</li>
+        <li>Uninstalling ScanPDF removes all stored data.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>ScanPDF is suitable for general audiences. The app does not knowingly collect any information from any users, including children under 13.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>Since all data is stored locally on your device and the developer has no access to it, requests regarding your personal data are handled directly by you:</p>
+      <ul>
+        <li>View what is stored: open the Preview screen, or browse Android's per-app storage info</li>
+        <li>Delete: uninstall the app</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>Compliance</h2>
+      <p>This app is designed to support compliance with:</p>
+      <ul>
+        <li>General Data Protection Regulation (GDPR)</li>
+        <li>California Consumer Privacy Act (CCPA)</li>
+        <li>Other applicable data protection laws</li>
+      </ul>
+      <p>Because no data leaves your device, most data subject rights are already satisfied at the design level.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><strong>Developer:</strong> Evgenii Lazarev<br>
+      <strong>GitHub:</strong> <a href="https://github.com/eslazarev/pdf-pro">github.com/eslazarev/pdf-pro</a><br>
+      <strong>Email:</strong> <a href="mailto:eslazarev@gmail.com">eslazarev@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <table>
+        <thead>
+          <tr><th>Data Type</th><th>Collected</th><th>Stored Locally</th><th>Sent to Servers</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Page photos</td><td>Yes (when you scan)</td><td>Yes</td><td>No</td><td>Until uninstall</td></tr>
+          <tr><td>Generated PDFs</td><td>Yes</td><td>Yes</td><td>No</td><td>Until uninstall</td></tr>
+          <tr><td>Personal info</td><td>No</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>Analytics</td><td>No</td><td>-</td><td>-</td><td>-</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px"><strong>Key Points:</strong></p>
+      <ul>
+        <li>All data stays on your device</li>
+        <li>ScanPDF never connects to a developer-operated server</li>
+        <li>The developer cannot remotely access or delete your data</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="index.html" style="color:var(--accent);text-decoration:none;">ScanPDF</a>
+      <br>On-device · Private · Fast
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanPDF</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-2: #1e6be5;
+      --radius: 14px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(120% 120% at 20% 20%, rgba(96,165,250,0.10), transparent),
+                  radial-gradient(140% 140% at 80% 10%, rgba(30,107,229,0.10), transparent),
+                  var(--bg);
+      color: var(--text);
+      padding: 48px 20px 80px;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, rgba(96,165,250,0.14), rgba(30,107,229,0.14));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: -0.02em; }
+    p.lead { margin: 0; color: var(--muted); font-size: 16px; }
+    section {
+      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 24px 24px 18px;
+      box-shadow: var(--shadow);
+    }
+    h2 { margin-top: 0; color: var(--accent); letter-spacing: -0.01em; }
+    ul { padding-left: 20px; margin: 12px 0 0; }
+    li { margin: 6px 0; }
+    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>ScanPDF</h1>
+      <p class="lead">On-device document scanner - turns paper into multi-page PDF, no cloud required.</p>
+    </div>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Scan any document:</strong> receipts, contracts, notes, whiteboards, ID cards.</li>
+        <li><strong>Auto edge detection &amp; perspective correction:</strong> powered by Google ML Kit Document Scanner running on-device.</li>
+        <li><strong>Multi-page PDFs:</strong> combine several pages into a single document, then preview the first page.</li>
+        <li><strong>Filters:</strong> Original, Black &amp; White, Grayscale, Auto-enhance.</li>
+        <li><strong>Gallery import:</strong> scan photos already on your device.</li>
+        <li><strong>Instant share:</strong> send the PDF to any app via Android's system share sheet.</li>
+        <li><strong>Privacy by design:</strong> no internet permission declared, no analytics, no ads, no tracking. All scans stay on your device.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="privacy-policy.html" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>
+      <br>ScanPDF · On-device · Private · Fast
+    </footer>
+  </div>
+</body>
+</html>
