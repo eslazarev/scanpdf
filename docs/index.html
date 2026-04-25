@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ScanPDF</title>
+  <link rel="icon" type="image/png" href="images/icon-512.png">
   <style>
     :root {
       --bg: #0f172a;
@@ -26,16 +27,34 @@
       padding: 48px 20px 80px;
       line-height: 1.6;
     }
-    .wrap { max-width: 880px; margin: 0 auto; }
+    .wrap { max-width: 980px; margin: 0 auto; }
     .hero {
       background: linear-gradient(135deg, rgba(96,165,250,0.14), rgba(30,107,229,0.14));
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: calc(var(--radius) + 4px);
-      padding: 28px 32px;
+      padding: 32px 32px;
       box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
-    h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: -0.02em; }
+    .hero img.icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(30,107,229,0.4);
+      flex-shrink: 0;
+    }
+    .hero-text { min-width: 0; }
+    h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -0.02em; }
     p.lead { margin: 0; color: var(--muted); font-size: 16px; }
+    .banner {
+      margin-top: 24px;
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: block;
+    }
     section {
       margin-top: 32px;
       background: var(--card);
@@ -48,16 +67,50 @@
     ul { padding-left: 20px; margin: 12px 0 0; }
     li { margin: 6px 0; }
     code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .shot {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 12px;
+      text-align: center;
+    }
+    .shot img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+    .shot-caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
     a { color: var(--accent); }
+    @media (max-width: 540px) {
+      .hero { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .hero img.icon { width: 72px; height: 72px; }
+      h1 { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>ScanPDF</h1>
-      <p class="lead">On-device document scanner - turns paper into multi-page PDF, no cloud required.</p>
+      <img class="icon" src="images/icon-512.png" alt="ScanPDF icon">
+      <div class="hero-text">
+        <h1>ScanPDF</h1>
+        <p class="lead">On-device document scanner - turns paper into multi-page PDF, no cloud required.</p>
+      </div>
     </div>
+
+    <img class="banner" src="images/feature-graphic-1024x500.png" alt="ScanPDF feature graphic">
 
     <section>
       <h2>What it does</h2>
@@ -70,6 +123,28 @@
         <li><strong>Instant share:</strong> send the PDF to any app via Android's system share sheet.</li>
         <li><strong>Privacy by design:</strong> no internet permission declared, no analytics, no ads, no tracking. All scans stay on your device.</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <div class="shot">
+          <img src="images/01-home.png" alt="Home screen with New Scan button">
+          <div class="shot-caption">Home</div>
+        </div>
+        <div class="shot">
+          <img src="images/02-scanning.png" alt="Live edge detection while scanning">
+          <div class="shot-caption">Auto edge detection</div>
+        </div>
+        <div class="shot">
+          <img src="images/03-edit.png" alt="Post-capture editor with filters and crop">
+          <div class="shot-caption">Filters &amp; cropping</div>
+        </div>
+        <div class="shot">
+          <img src="images/04-preview.png" alt="PDF preview with Share button">
+          <div class="shot-caption">Preview &amp; share</div>
+        </div>
+      </div>
     </section>
 
     <footer>
